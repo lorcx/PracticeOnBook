@@ -2,8 +2,7 @@ package think_in_java;
 
 import java.util.EnumMap;
 import java.util.Iterator;
-
-import static thiniinjava.Input.*;
+import static think_in_java.Input.*;
 
 /**
  * Category安全

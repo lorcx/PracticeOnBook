@@ -1,7 +1,5 @@
 package think_in_java;
 
-import util.CodingUtil;
-
 import java.io.*;
 import java.util.zip.*;
 
@@ -29,7 +27,7 @@ public class ZipCompress {
             CheckedOutputStream cos = new CheckedOutputStream(fos,new Adler32());
             ZipOutputStream zos = new ZipOutputStream(cos);
             BufferedOutputStream bos = new BufferedOutputStream(zos);
-            String comment = CodingUtil.toUTF8("这是注释");
+            String comment = "";//CodingUtil.toUTF8("这是注释");
             System.out.println(comment);
             zos.setComment(comment);
             for(String arg : args){

@@ -1,15 +1,6 @@
 package Java_classical_program300.di12zhang;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-
-import entity.User;
+import java.io.*;
 
 /**
  *
@@ -62,4 +53,43 @@ public class xuliehua {
 		
 	}
 	
+}
+
+class User {
+	private String name;
+	private String age;
+	private int money;
+
+	public User() {
+	}
+
+	public User(String name, String age, int money) {
+		this.name = name;
+		this.age = age;
+		this.money = money;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public int getMoney() {
+		return money;
+	}
+
+	public void setMoney(int money) {
+		this.money = money;
+	}
 }
