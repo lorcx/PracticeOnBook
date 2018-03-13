@@ -1,11 +1,14 @@
+/*
 package java8.option;
 
 import java.util.Optional;
 
+*/
 /**
  * @Author lx
  * @Date 2018/2/21 16:00
- */
+ *//*
+
 public class OptionalDemo {
     public static void main(String[] args) {
 //        map();
@@ -34,18 +37,22 @@ public class OptionalDemo {
 
     }
 
-    /**
+    */
+/**
      * 使用map从optional对象中提取和转换值
-     */
+     *//*
+
     public static void map() {
         Optional<Address> addressOptional = Optional.ofNullable(new Address("dads", "asd"));
         Optional<String> street = addressOptional.map(Address::getDoor);
         System.out.println(street.get());
     }
 
-    /**
+    */
+/**
      * 使用flatMap链接Optional对象
-     */
+     *//*
+
     public static void flatMap() {
         User user = new User();
         user.setUsername("biezhi");
@@ -58,14 +65,18 @@ public class OptionalDemo {
     }
 
     public static String getStreet(Optional<User> user, int minAge) {
-        /*
+        */
+/*
          * flatmap 扁平化的map
          * map用于类型转换
          * orElse如果不匹配则执行
-         */
-        return user.filter(u -> u.getAge() >= minAge)
-                .flatMap(User::getOptAddress)
-                .map(Address::getStreet)
-                .orElse("qita");
+         *//*
+
+        //return user.filter(u -> u.getAge() >= minAge)
+        //        .flatMap(User::getOptAddress)
+        //        //.map(Address::getStreet)
+        //        .orElse("qita");
+        return null;
     }
 }
+*/
