@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * inventory 库存
@@ -32,6 +33,11 @@ public class FilteringApples {
         List<Apple> specicalApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 ||
                 "brown".equals(a.getColor()));
         System.out.println(specicalApples);
+
+        // 并行处理
+        List<Apple> specicalApples2 = inventory.parallelStream().filter((Apple a) -> a.getWeight() > 150)
+                .collect(Collectors.toList());
+        System.out.println(specicalApples2);
 
 
     }
