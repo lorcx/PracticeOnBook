@@ -30,6 +30,31 @@ public class StreamTest {
         List<String> title = Arrays.asList("java", "IKN", "qwe");
         Stream<String> s = title.stream();
         s.forEach(System.out::print);
-        s.forEach(System.out::print);// tream has already been operated upon or closed
+        // tream has already been operated upon or closed
+        //s.forEach(System.out::print);
+
+
+        splitPrint();
+    }
+
+    /**
+     * 打印每个stream操作
+     */
+    public static void splitPrint() {
+        /*
+        * filter和mapping -> 循环合并
+        * */
+        List<String> threeHighCaloricDishName = Dish.menu.stream()
+                .filter(d -> {
+                    System.out.println("filter : " + d.getName());
+                    return d.getCalories() > 300;
+                })
+                .map(d -> {
+                    System.out.println("mapping : " + d.getName());
+                    return d.getName();
+                })
+                .limit(3)
+                .collect(Collectors.toList());
+        //System.out.println(threeHighCaloricDishName);
     }
 }
