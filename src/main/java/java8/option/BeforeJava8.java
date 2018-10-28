@@ -1,6 +1,5 @@
 package java8.option;
 
-import javax.xml.registry.infomodel.User;
 
 /**
  * @Author lx
