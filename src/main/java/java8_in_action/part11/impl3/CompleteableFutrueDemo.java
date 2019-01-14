@@ -47,8 +47,8 @@ public class CompleteableFutrueDemo {
         long start = System.nanoTime();
 
         //System.out.println(findPrices("My favorite product"));
-        System.out.println(findPricesParallel("My favorite product"));
-        //System.out.println(findPricesCompletableFuture("My favorite product"));
+        //System.out.println(findPricesParallel("My favorite product"));
+        System.out.println(findPricesCompletableFuture("My favorite product"));
 
         // 执行更多的任务
         doSomething();
